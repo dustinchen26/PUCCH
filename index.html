@@ -43,7 +43,7 @@ SFN	Subframe	Slot Index	Channel	HARQ	RETRY	DCI	UCI	RB_ALLOC_E
 <!DOCTYPE html>
 <html>
 <head>
-    <title>計算 r_pucch</title>
+    <title>Calculate PUCCH resource index</title>
     <script>
         function calculateRPUCCH() {
             var N_CCE = parseInt(document.getElementById('N_CCE').value);
@@ -63,17 +63,18 @@ SFN	Subframe	Slot Index	Channel	HARQ	RETRY	DCI	UCI	RB_ALLOC_E
     </script>
 </head>
 <body>
-    <h1>計算 r_pucch</h1>
-	<p> 3GPP spec 38.213 chap 9.2.3  UE procedure for reporting HARQ-ACK </p>
+    <h1>Calculate PUCCH resource index</h1>
+	<p style="margin: 0;">Author: Dustin Chen, email: <a href="mailto:Dustin_Chen@compal.com" style="line-height: 1;">Dustin_Chen@compal.com</a></p>
+	<p> 3GPP spec 38.213 chap 9.2.3 UE procedure for reporting HARQ-ACK </p>
 	<p> ex: (N_CCE, R_PUCCH, delta_PRI, n_cce)=(45, 14, 7, 36)</p>
     <label for="N_CCE">N_CCE:</label>
-    <input type="number" id="N_CCE" required><br><br>
+    <input type="number" id="N_CCE" style="width: 40px;" required><br><br>
     <label for="R_PUCCH">R_PUCCH:</label>
-    <input type="number" id="R_PUCCH" required><br><br>
+    <input type="number" id="R_PUCCH" style="width: 40px;" required><br><br>
     <label for="delta_PRI">delta_PRI:</label>
-    <input type="number" id="delta_PRI" required><br><br>
+    <input type="number" id="delta_PRI" style="width: 40px;" required><br><br>
     <label for="n_cce">n_cce:</label>
-    <input type="number" id="n_cce" required><br><br>
+    <input type="number" id="n_cce" style="width: 40px;" required><br><br>
     <button type="button" onclick="calculateRPUCCH()">計算</button>
     <p id="result"></p>
 </body>
